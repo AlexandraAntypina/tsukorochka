@@ -1,0 +1,419 @@
+@charset "UTF-8";
+
+/*menu specific styles*/
+
+/** TODO: rework menu on top mode. Incorrect positioning */
+
+
+/** main menu docking container **/
+cfx-menu-docker {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+    width: 100%;
+    transition: all .5s ease;
+	height: 52px;
+	--menu-height: 52px;
+}
+
+/** menu tuggle **/
+/** displayed only on mobile devices **/
+/** turn on/off menu - it will slide out from left **/
+
+.menu-tuggle {
+	position: relative;
+	display: none;
+	width: 32px;
+	height: 32px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	background: transparent;
+	margin-left: var(--lt-spacing-small);
+}
+
+.menu-tuggle:active {
+	outline: none;
+	border: none;
+}
+
+.menu-tuggle span {
+	position: relative;
+	display: block;
+	outline: none;
+	margin: auto;
+}
+
+.menu-tuggle span:after,
+.menu-tuggle span:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: -8px;
+}
+
+.menu-tuggle span:after {
+	top: 8px;
+}
+
+.menu-tuggle span,
+.menu-tuggle span:after,
+.menu-tuggle span:before {
+	width: 100%;
+	height: 4px;
+	background-color: white;
+	transition: all 0.3s;
+	backface-visibility: hidden;
+	border-radius: 2px;
+}
+
+.menu-tuggle.tuggle-on span {
+  background-color: transparent;
+}
+.menu-tuggle.tuggle-on span:before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-tuggle.tuggle-on span:after {
+  transform: rotate(-45deg) translate(6px, -7px);
+}
+
+.menu-tuggle.tuggle-on {
+	border: none;
+	outline: none;
+}
+
+/** tuggle button for menu aside bar **/
+
+.menu-tuggle-button {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	width: 32px;
+	height: 32px;
+	border-radius: 3px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	background: #9c9c9c;
+}
+
+.menu-tuggle-button:hover,
+.menu-tuggle-button:active,
+.menu-tuggle-button.active,
+.menu-tuggle-button.tuggle-on {
+	background-color: var(--theme-color);
+}
+
+.menu-tuggle-button .menu-tuggle-icon {
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 32px;
+	height: 32px;
+	background-image: var(--image);
+}
+
+/** main menu bar **/
+
+.menu {
+    display: inline-block;
+    clear: both;
+	--item-spacing: 15px;
+}
+
+/** left menu sub bar **/
+
+.menu-logo {
+	margin-right: var(--lt-spacing-small);
+	vertical-align: middle;
+	transition: all 0.3s;
+}
+
+.menu-logo[type=dynamic] {
+	display: none;
+}
+
+/** right menu sub bar **/
+
+.menu-drop-down {
+	visibility: hidden;
+	opacity: 0;
+	margin-top: 5px;
+	transition: all 0.3s;
+	transition-delay: 0.5s;
+	padding: 8px;
+	margin-left: -4px;
+	border-radius: 4px;
+	background-color: var(--fill, transparent);
+}
+
+.menu-drop-down.tuggle-on,
+.menu-tuggle-button:hover ~ .menu-drop-down,
+.menu-drop-down:hover {
+	opacity: 1;
+	visibility: visible;
+}
+
+.button-wrap {
+	display: inline-block;
+	padding: 0;
+    margin: 0;
+    outline: 0;
+    border: 0;
+}
+
+.button-wrap > * {
+	position: fixed;
+}
+
+.button-wrap > [type=tuggle-button] {
+	position: relative;
+}
+
+.menu-right-sub-buttons {
+	margin-left: var(--lt-spacing-small);
+}
+
+/** menu items / sub items **/
+
+
+.menu > li { /** top lvl item **/
+    display: inline-block;
+    list-style: none;
+    position: relative;
+    height: 24px;
+	font-size: 18px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+/*	line-height: 21px;*/
+}
+
+.menu > li:not(:first-child) {
+    margin-left: var(--item-spacing);
+}
+
+.menu li > a {
+    transition:all linear 0.15s;
+    cursor: pointer;
+    color: #333;
+	text-decoration: none;
+}
+
+.menu li:hover > a,
+.menu li > a:active,
+.menu li:active > a {
+    color: #f48a97;
+}
+
+/** sub items **/
+
+.menu li > ul li {
+    display: block;
+}
+
+.menu > li ul > li {
+    display: block;
+    list-style: none;
+    margin: 0;
+    text-align: left;
+	vertical-align: middle;
+	padding: 4px 25px;
+}
+
+.menu > li ul > li:first-child {
+	padding-top: 15px;
+}
+
+.menu > li ul > li:last-child {
+	padding-bottom: 15px;
+}
+
+.menu > li ul > li > a:before {
+	position: absolute;
+	font-family: FontAwesome;
+	color: #f48a97;
+	content: '\f105';
+	left: -6px;
+	top: -1px;
+/*
+	opacity: 0;
+	visibility: hidden;
+*/
+}
+
+.menu > li ul > li > a {
+	position: relative;
+	display: block;
+	width: 100%;
+	padding-left: 0px;
+	padding-right: 14px;
+	transition: all .33s ease;
+}
+
+
+.menu > li ul > li:hover > a {
+	opacity: 1;
+	visibility: visible;
+	left: 0px;
+	padding-left: 14px;
+	padding-right: 0px;
+}
+
+
+/** menu items / sub items expand icon **/
+
+tuggle {
+	display: contents;
+}
+
+.menu li > a:not(:only-child) > tuggle {
+	display: inline-block;
+	margin-left: 3px;
+    transition: .3s;
+    font-family: FontAwesome;
+	will-change: transform;
+	transition: 0.4s all ease;
+}
+
+.menu li:hover > a:not(:only-child) > tuggle {
+	transform: rotate(180deg);
+}
+
+.menu li > a:not(:only-child) > tuggle:before {
+	content: "\f107";
+}
+
+.menu  li > ul a:not(:only-child) > tuggle:before {
+	content: "\f105";
+}
+
+
+/**	          MEDIA SIZE FLEX        **/
+
+
+@media screen and (max-width: 989px) {
+
+	cfx-menu-docker {
+		position: fixed;
+		justify-content: space-between;
+		top: 0px;
+		height: var(--menu-height);
+		width: 100%;
+		z-index: 9999;
+		background-color: var(--theme-dark-color);
+		color: white;
+		text-align: left;
+		}
+	
+	cfx-menu-docker.top-of-page .menu-logo {
+		display: inline-block;
+	}
+	
+	.menu-tuggle {
+		display: inline-block;
+	}
+	
+	.menu {
+		position: fixed;
+		left: 0;
+		top: 52px;
+		width: 200px;
+		height: 100%;
+/*		padding: 15px 15px;*/
+		text-align: left;
+		vertical-align: top;
+		background-color: #aaa;
+		transition: all .2s ease;
+		transform: translateX(-110%);
+		overflow-x: hidden;
+		overflow-y: auto;
+		background-color: #3a3939;
+		z-index: 100;
+	}
+	
+	.menu.tuggle-on {
+		transform: translateX(0);
+	}
+	
+	.menu > li {
+		display: block;
+		margin-left: 15px;
+		margin-top: 10px;
+	}
+	
+	.menu > li > a {
+		color: #fff;
+	}
+	
+	.menu > li:not(:first-child) {
+		margin-left: 15px;
+	}
+	
+	.menu li > ul {
+		position: relative;
+		display: block;
+		background: #3a3939;
+		transition-delay: 1s;
+		max-height: 0;
+		z-index: inherit;
+	}
+
+	.menu li:hover > ul {
+		transition-delay: 0s;
+		max-height: 200px;
+	}
+}
+
+@media screen and (min-width: 990px) {
+
+	/** most-top modification for all components **/
+	cfx-menu-docker.top-of-page {
+		position: fixed;
+		top: 0px;
+		background-color: var(--theme-dark-color);
+		color: white;
+	}
+
+	cfx-menu-docker.top-of-page .menu-logo {
+		display: inline-block;
+	}
+
+	cfx-menu-docker.top-of-page .menu > li > a {
+		color: white;
+	}
+	
+	cfx-menu-docker.top-of-page .menu li:hover > a,
+	cfx-menu-docker.top-of-page .menu li > a:active,
+	cfx-menu-docker.top-of-page .menu li:active > a {
+    	color: #f48a97;
+	}
+
+	.menu-tuggle {
+		display: none;
+	}
+	
+	.menu li > ul {
+	margin: 0;
+    padding: 0;
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 3px 12px 1px #f48a97;
+
+	opacity: 0;
+    visibility: hidden;
+    will-change: opacity, visibility;
+	transform: translateY(40px) scale(0.95);
+	transition: 0.3s all cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	transition-delay: 1s;
+}
+
+.menu  li:hover > ul {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0px) scale(1);
+	transition-delay: 0s;
+}
+}

@@ -1,0 +1,33 @@
+{
+    "name": "Цукорочка",
+    "short_name": "Цукорочка",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "Ўугар≥нг дл¤ вас",
+    "icons": [{
+        "src": "media/favicon/favicon-32.png",
+        "sizes": "32x32",
+        "type": "image/png"
+  }, {
+        "src": "media/favicon/favicon-32.png",
+        "sizes": "72x72",
+        "type": "image/png"
+  }, {
+        "src": "media/favicon/favicon-96.png",
+        "sizes": "96x96",
+        "type": "image/png"
+  }, {
+        "src": "media/favicon/favicon-128.png",
+        "sizes": "144x144",
+        "type": "image/png"
+  }, {
+        "src": "media/favicon/favicon-168.png",
+        "sizes": "168x168",
+        "type": "image/png"
+  }, {
+        "src": "media/favicon/favicon-192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+  }]
+}

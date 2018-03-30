@@ -1,0 +1,61 @@
+
+[class*="icon-"],
+[class*="cfx-icon-"] {
+    font-family: FontAwesome;
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+/*	color: var(--color, var(--def-link-alt-color));*/
+}
+
+.icon-round {
+	border-radius: 3px;
+    width: 1.71em;
+    height: 1.71em;
+    line-height: 1.71em;
+	text-align: center;
+	display: inline-block;
+}
+
+.icon-facebook:before {
+    content: "\f09a";
+}
+
+.icon-google:before {
+    content: "\f0d5";
+}
+
+.icon-twitter:before {
+    content: "\f099";
+}
+
+.icon-pinterest:before {
+    content: "\f0d2";
+}
+
+.icon-linkedin:before {
+    content: "\f0e1";
+}
+
+.icon-instagram:before {
+    content: "\f16d";
+}
+
+.icon-phone:before {
+	content: "\f095";
+}
+
+.icon-quote-left:before {
+  content: "\f10d";
+}
+.icon-quote-right:before {
+  content: "\f10e";
+}
+.icon-clock:before{
+	content: "\f017";
+}

@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+/* cfx - clear and flexible */
+
+cfx_page {
+	display: block;
+	overflow: hidden;
+	min-height: 100vh;
+}
+
+.master-page {
+	height: 100vh;
+	overflow-y: auto;
+}
+
+.master-page::-webkit-scrollbar-track {
+/*	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+	border-radius: 10px;
+	background: transparent url('../media/transparent.png') repeat-y !important;
+}
+
+.master-page::-webkit-scrollbar {
+	width: 12px;
+	background: transparent url('../media/transparent.png') repeat-y !important;
+	z-index: -1;	
+}
+
+.master-page::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+/*	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);*/
+	background-color: #FF7285;
+}
+
+
+cfx-page-header {
+	display: block;
+	z-index: 1000;
+	padding: 0;
+	margin: 0;
+	border-bottom: 0;
+	width: 100%;
+}
+
+most-top {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+}
+
+cfx-page-content {
+	display: block;
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0;
+}
+
+cfx-page-section {
+    display: block;
+	width: 100%;
+}
+
+cfx-section {
+	display: block;
+	padding-top: var(--para-int-padding);
+	padding-bottom: var(--para-int-padding);
+	font-family: var(--default-font);
+}
+
+
+cfx-page-footer {
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.cfx-top-scroll {
+    position: fixed;
+    top: 0px;
+}

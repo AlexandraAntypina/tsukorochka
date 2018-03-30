@@ -1,0 +1,88 @@
+
+/** Flex table
+  * by default has 1 row
+  * --cols        : cols count
+  * type          : flex-row or flex
+  * item-spacing  : small or middle
+  * item-border   : int
+  */
+
+cfx-flex {
+	display: block;
+	width: 100%;
+	padding-top: var(--lt-spacing-middle);
+	padding-bottom: var(--lt-spacing-middle);
+	padding-left: 0;
+	padding-right: 0;
+	background: transparent;
+	--columns: var(--cols, 1);
+}
+
+cfx-flex cfx-flex-item {
+	display: inline-block;
+	background: transparent;
+	margin-right: 0;
+	/* max-width = (100% - (paddings)) / colCount */
+	/* math was disabled: used flex:1 to align items in a row */
+/*
+	--int-sp: calc(var(--lt-spacing-small) * (var(--columns)-1));
+	--out-sp: calc(var(--lt-spacing-middle) * var(--columns));
+	max-width: calc((100% - var(--int-sp)) / var(--columns));
+*/
+}
+
+cfx-flex cfx-flex-item:not(:first-child) {
+	margin-left: var(--lt-spacing-small);
+}
+
+cfx-flex[type=flex-row] {
+	display: flex;
+}
+
+cfx-flex[type=flex-row] cfx-flex-item {
+	flex: 1;
+}
+
+cfx-flex[type=flex], cfx-flex[type=flex] cfx-flex-row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+cfx-flex[type=flex] > cfx-flex-item {
+	flex: auto;
+}
+
+cfx-flex-row {
+	width: 100%;
+	display: block;
+}
+
+cfx-flex-row > cfx-flex-item {
+	flex: 1;
+}
+
+
+cfx-flex[item-spacing=small] cfx-flex-item {
+	padding-top: var(--lt-spacing-v-small);
+	padding-bottom: var(--lt-spacing-v-small);
+	padding-left: var(--lt-spacing-small);
+	padding-right: var(--lt-spacing-small);
+}
+
+
+cfx-flex[item-spacing=middle] cfx-flex-item {
+	padding-top: var(--lt-spacing-v-small);
+	padding-bottom: var(--lt-spacing-v-small);
+	padding-left: var(--lt-spacing-middle);
+	padding-right: var(--lt-spacing-middle);
+}
+
+cfx-flex[item-border=int]
+cfx-flex-item:not(:first-child) {
+	border-left: 1px dashed var(--split-color, var(--theme-alt-color));
+}
+
+cfx-flex[align=center]{
+	item-align: center; 
+	justify-content: center;
+}

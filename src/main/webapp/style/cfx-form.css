@@ -1,0 +1,620 @@
+@CHARSET "UTF-8";
+
+:root {
+	--login-bg-color: var(--main-bg-color);
+	--login-dark-color: var(--theme-dark-color);
+	--login-alt-color: var(--theme-color);
+	--login-bright-color: #ed2553;
+
+}
+
+/* Change Autocomplete styles in Chrome*/
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	-webkit-animation-name: autofill;
+	-webkit-animation-fill-mode: both;
+}
+
+@-webkit-keyframes autofill {
+	to {
+		color: #ed2553;
+		background: transparent;
+	}
+}
+
+input::-webkit-datetime-edit{ color: transparent; }
+input:focus::-webkit-datetime-edit{ color: #000; } 
+input.not-empty::-webkit-datetime-edit{ color: #000; }
+
+/******************************/
+
+/** Panel + decorator **/
+
+.login-panel-decoration,
+.login-panel {
+	background: #f9f9f9;
+	background: linear-gradient(to bottom, rgba(248, 248, 248, 1) 0%, rgba(249, 249, 249, 1) 100%);
+	box-shadow: 0 1px 0 #fff inset;
+	border: 1px solid #c4c6ca;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	max-width: 460px;
+	position: relative;
+	text-align: center;
+	text-shadow: 0 1px 0 #fff;
+	z-index: 10;
+	visibility: visible;
+}
+
+
+.login-panel-decoration:after,
+.login-panel-decoration:before {
+	background: #f9f9f9;
+	background: linear-gradient(to bottom, rgba(248, 248, 248, 1) 0%, rgba(249, 249, 249, 1) 100%);
+	border: 1px solid #c4c6ca;
+	content: "";
+	display: block;
+	height: 100%;
+	left: -1px;
+	width: 100%;
+	position: absolute;
+	visibility: visible;
+}
+
+.login-panel-decoration {
+	visibility: hidden;
+}
+
+.login-panel-decoration:after {
+	transform: rotate(2deg);
+	top: 0;
+	z-index: 1;
+}
+
+.login-panel-decoration:before {
+	transform: rotate(-3deg);
+	top: 0;
+	z-index: 2;
+}
+
+/******************************/
+
+/** active state **/
+
+.login-panel.active .card:first-child {
+	background: #fafafa;
+	margin: 0 10px;
+}
+
+.login-panel.active .card.alt {
+	top: 0px;
+	right: 0;
+	width: 100%;
+	min-width: 100%;
+	height: auto;
+	border-radius: 0px;
+	padding: 60px 0 40px;
+	overflow: hidden;
+}
+
+.login-panel.active .card.alt .toggle {
+	position: absolute;
+	top: 40px;
+	right: -70px;
+	box-shadow: none;
+	transform: scale(30);
+	transition: transform .3s ease;
+}
+
+.login-panel.active .card.alt .toggle:before {
+	content: '';
+}
+
+.login-panel.active .card.alt .heading,
+.login-panel.active .card.alt .input-container,
+.login-panel.active .card.alt .button-container {
+	left: 0;
+	opacity: 1;
+	visibility: visible;
+	transition: .3s ease;
+}
+
+.login-panel.active .card.alt .heading {
+	transition-delay: .3s;
+}
+
+.login-panel.active .card.alt .input-container {
+	transition-delay: .4s;
+}
+
+.login-panel.active .card.alt .input-container:nth-child(2) {
+	transition-delay: .5s;
+}
+
+.login-panel.active .card.alt .input-container:nth-child(3) {
+	transition-delay: .6s;
+}
+
+.login-panel.active .card.alt .button-container {
+	transition-delay: .7s;
+}
+
+
+/******************************/
+
+/** child items **/
+
+/** cards **/
+
+.card {
+	position: relative;
+	background: var(--main-bg-color);
+	border-radius: 5px;
+	padding: 60px 0 40px 0;
+	box-sizing: border-box;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	transition: .3s ease;
+
+}
+
+.card.alt {
+	position: absolute;
+	top: 40px;
+	right: -70px;
+	z-index: 10;
+	width: 140px;
+	height: 140px;
+	background: none;
+	border-radius: 100%;
+	box-shadow: none;
+	padding: 0;
+	transition: .3s ease;
+}
+
+
+.card.alt .toggle {
+	position: relative;
+	background: var(--theme-color);
+	width: 60px;
+	height: 60px;
+	border-radius: 100%;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	color: #ffffff;
+	font-size: 38px;
+	line-height: 60px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.card.alt .toggle:before {
+	content: '\f040';
+	display: inline-block;
+	font: normal normal normal 14px/60px FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	transform: translate(0, 0);
+}
+
+.card .heading,
+.input-panel .heading {
+	color: var(--dark-color);
+	font: bold 25px Helvetica, Arial, sans-serif;
+	letter-spacing: -0.05em;
+	line-height: 20px;
+	margin: 10px 0 30px;
+}
+
+.card .heading:before,
+.card .heading:after {
+	content: "";
+	height: 1px;
+	position: absolute;
+	width: 18%;
+	margin-top: 10px;
+}
+
+.card .heading:after {
+	background: var(--dark-color);
+	background: linear-gradient(to right, #453d3e 0%, #fff 100%);
+	right: 90px;
+}
+
+.card .heading:before {
+	background: rgb(126, 126, 126);
+	background: linear-gradient(to left, #453d3e 0%, #fff 100%);
+	left: 90px;
+}
+
+.card.alt .heading {
+	left: 100px;
+	opacity: 0;
+	visibility: hidden;
+	position: relative;
+	border-color: #ffffff;
+	color: #ffffff;
+}
+
+.card.alt .heading:after {
+	background: var(--theme-color);
+	background: linear-gradient(to right, #fff 0%, #f48a97 100%);
+	right: 80px;
+}
+
+.card.alt .heading:before {
+	background: var(--theme-color);
+	background: linear-gradient(to left, #fff 0%, #f48a97 100%);
+	left: 80px;
+}
+
+.card.alt .heading .close {
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 40px;
+	display: inline;
+	color: #fff;
+	font-size: 58px;
+	font-weight: 400;
+}
+
+.card.alt .heading .close:before {
+	content: '\00d7';
+}
+
+/*************/
+
+.card .input-container,
+.input-panel .input-container {
+	position: relative;
+	margin: 0 60px 50px;
+}
+
+.card.alt .input-container {
+	position: relative;
+	margin: 0 30px 20px;
+}
+
+.card .input-container.mini {
+	margin: 0 20px 10px;
+}
+
+.card .input-container input,
+.card .input-container select,
+.input-panel .input-container input,
+.input-panel .input-container select  {
+	outline: none;
+	z-index: 1;
+	position: relative;
+	background: none;
+	width: 100%;
+	height: 60px;
+	border: 0;
+	color: #212121;
+	font-size: 24px;
+	font-weight: 400;
+}
+
+.card .input-container.mini input,
+.card .input-container.mini select {
+	outline: none;
+	z-index: 1;
+	position: relative;
+	background: none;
+	width: 100%;
+	height: 30px;
+	border: 0;
+	color: #212121;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.card .input-container.mini label {
+	color: #757575;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 30px;
+	-webkit-transition: 0.2s ease;
+	transition: 0.2s ease;
+}
+
+.card .input-container input:focus ~ label,
+.input-panel .input-container input:focus ~ label  {
+	color: #9d9d9d;
+	-webkit-transform: translate(-12%, -50%) scale(0.75);
+	transform: translate(-12%, -50%) scale(0.75);
+}
+
+.card .input-container input:focus ~ .bar:before,
+.card .input-container input:focus ~ .bar:after,
+.input-panel .input-container input:focus ~ .bar:before,
+.input-panel .input-container input:focus ~ .bar:after  {
+	width: 50%;
+}
+
+.card .input-container input.not-empty ~ label,
+.card .input-container select ~ label,
+.input-panel .input-container input.not-empty ~ label,
+.input-panel .input-container select ~ label {
+	color: #9d9d9d;
+	-webkit-transform: translate(-12%, -50%) scale(0.75);
+	transform: translate(-12%, -50%) scale(0.75);
+}
+
+.card .input-container label,
+.input-panel .input-container label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #757575;
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 60px;
+	-webkit-transition: 0.2s ease;
+	transition: 0.2s ease;
+}
+
+.card .input-container .bar,
+.input-panel .input-container .bar {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: #757575;
+	width: 100%;
+	height: 1px;
+}
+
+.card .input-container .bar:before,
+.card .input-container .bar:after,
+.input-panel .input-container .bar:before,
+.input-panel .input-container .bar:after {
+	content: '';
+	position: absolute;
+	background: var(--login-bright-color);
+	width: 0;
+	height: 2px;
+	-webkit-transition: .2s ease;
+	transition: .2s ease;
+}
+
+.card .input-container .bar:before,
+.input-panel .input-container .bar:before {
+	left: 50%;
+}
+
+.card .input-container .bar:after,
+.input-panel .input-container .bar:after {
+	right: 50%;
+}
+
+.card .button-container,
+.input-panel .button-container {
+	margin: 0 60px;
+	text-align: center;
+}
+
+.card .compact .button-container,
+.input-panel .compact .button-container {
+	margin: 0 30px;
+	text-align: center;
+}
+
+.card .button-container button,
+.input-panel .button-container button {
+	outline: 0;
+	cursor: pointer;
+	position: relative;
+	display: inline-block;
+	background: 0;
+	width: 240px;
+	border: 2px solid var(--login-dark-color);
+	padding: 20px 0;
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 1;
+	text-transform: uppercase;
+	overflow: hidden;
+	-webkit-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.card .compact .button-container button,
+.input-panel .compact .button-container button {
+	outline: 0;
+	cursor: pointer;
+	position: relative;
+	display: inline-block;
+	background: 0;
+	width: 180px;
+	border: 2px solid var(--login-dark-color);
+	padding: 10px 0;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1;
+	text-transform: uppercase;
+	overflow: hidden;
+	-webkit-transition: .3s ease;
+	transition: .3s ease;
+}
+
+
+.card .button-container button span,
+.input-panel .button-container button span {
+	position: relative;
+	z-index: 1;
+	color: var(--login-dark-color);
+	-webkit-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.card .button-container button:before,
+.input-panel .button-container button:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: block;
+	background: var(--login-bright-color);
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	margin: -15px 0 0 -15px;
+	opacity: 0;
+	-webkit-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.card .button-container button:hover,
+.card .button-container button:active,
+.card .button-container button:focus,
+.input-panel .button-container button:hover,
+.input-panel .button-container button:active,
+.input-panel .button-container button:focus {
+	border-color: var(--login-bright-color);
+}
+
+.card .button-container button:hover span,
+.card .button-container button:active span,
+.card .button-container button:focus span,
+.input-panel .button-container button:hover span,
+.input-panel .button-container button:active span,
+.input-panel .button-container button:focus span {
+	color: var(login-bright-color);
+}
+
+.card .button-container button:active span,
+.card .button-container button:focus span,
+.input-panel .button-container button:active span,
+.input-panel .button-container button:focus span {
+	color: var(--login-bg-color);
+}
+
+.card .button-container button:active:before,
+.card .button-container button:focus:before,
+.input-panel .button-container button:active:before,
+.input-panel .button-container button:focus:before {
+	opacity: 1;
+	-webkit-transform: scale(10);
+	transform: scale(10);
+}
+
+.card .footer {
+	margin: 40px 0 0;
+	color: var(--login-dark-color);
+	font-size: 24px;
+	font-weight: 300;
+	text-align: center;
+}
+
+.card .footer a {
+	color: inherit;
+	text-decoration: none;
+	-webkit-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.card .footer a:hover {
+	color: var(--login-alt-color);
+}
+
+.card.alt .input-container,
+.card.alt .button-container {
+	left: 100px;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.card.alt .input-container input,
+.card.alt .input-container select {
+	color: var(--login-bg-color);
+}
+
+.card.alt .input-container input:focus ~ label {
+	color: var(--login-bg-color);
+}
+
+.card.alt .input-container input:focus ~ .bar:before,
+.card.alt .input-container input:focus ~ .bar:after {
+	background: var(--login-bg-color);
+}
+
+.card.alt .input-container input.not-empty ~ label,
+.card.alt .input-container select ~ label {
+	color: var(--login-bg-color);
+}
+
+.card.alt .input-container label {
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.card.alt .input-container .bar {
+	background: rgba(255, 255, 255, 0.8);
+}
+
+.card.alt .button-container button {
+	width: 100%;
+	background: var(--login-bg-color);
+	border-color: var(--login-bg-color);
+}
+
+.card.alt .button-container button span {
+	color: var(--login-bright-color);
+}
+
+.card.alt .button-container button:hover {
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.card.alt .button-container button:active:before,
+.card.alt .button-container button:focus:before {
+	display: none;
+}
+
+/* Keyframes */
+
+@-webkit-keyframes buttonFadeInUp {
+	0% {
+		bottom: 30px;
+		opacity: 0;
+	}
+}
+
+@keyframes buttonFadeInUp {
+	0% {
+		bottom: 30px;
+		opacity: 0;
+	}
+}
+
+/************* panel ****************/
+.content-panel {
+	width: 80%;
+	
+	
+}
+
+.input-panel{
+	background-color: white;
+	box-shadow: 0 1px 0 #fff inset;
+	border: 1px solid #c4c6ca;
+	padding: 15px;
+	
+}
+
+.photo-panel {
+	max-width: 320px;
+	padding: 10px;
+	text-align: center;
+	
+}
+.photo-panel img{
+	max-width: 320px;
+	height: auto;
+}

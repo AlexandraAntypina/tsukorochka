@@ -1,0 +1,47 @@
+/* CSS variables: main options are defined here*/
+
+:root {
+	/* sizes */
+	--raw-spacing-small: 0.5vw;
+
+	--lt-spacing-small: 0.6vw;
+	--lt-spacing-middle: 1.8vw;
+	--lt-spacing-large: 2.4vw;
+
+	--para-int-padding: 200px;
+	--lt-spacing-v-small: 15px;
+	--lt-spacing-v-middle: 24px;
+	--lt-spacing-v-large: 34px;
+
+	--lt-spacing-v-extralarge: 64px;
+
+	--max-width: 80vw;
+
+	/* colors */
+
+	--main-bg-color: #fff;
+	--theme-color: #f48a97;
+	--theme-alt-color: #fff;
+	--theme-disabled-color: #333;
+	--theme-dark-color: #453d3e;
+	--def-link-color: #453d3e;
+	--def-link-alt-color: #f48a97;
+
+
+}
+
+cfx-header-spacer {
+	display: block;
+	height: var(--lt-spacing-v-large);
+}
+
+@media screen and (max-width: 989px) {
+	
+	/** in this mode menu is always on top **/
+	
+	cfx-header-spacer {
+		display: block;
+		/** 56px menu height + 8px spacing from it **/
+		height: 64px;
+	}
+}
