@@ -3,6 +3,10 @@
 .classpath
 .project
 
+#never share files with secrets  :)
+cloudinary.properties
+mail.properties
+
 # Compiled class file
 *.class
 
