@@ -20,4 +20,9 @@ public class BaseController {
 	public String showContacts(){
 		return "contacts";
 	}
+	
+	@GetMapping("/price")
+	public String showPrice(){
+		return "price";
+	}
 }

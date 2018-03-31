@@ -618,3 +618,28 @@ input.not-empty::-webkit-datetime-edit{ color: #000; }
 	max-width: 320px;
 	height: auto;
 }
+
+table.price{
+    width: 50%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+table.price tr{
+    height: 48px;
+    
+}
+
+table.price tr:nth-child(even){
+   border-bottom: 2px solid #DDD;
+    background-color: #F9F9F9;
+}
+
+table.price tr:nth-child(odd){
+   border-bottom: 2px solid #DDD;
+    background-color: white;
+}
+
+table.price td:FIRST-CHILD {
+	padding-left: 10px;
+}

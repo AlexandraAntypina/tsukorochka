@@ -24,8 +24,8 @@
 				<li><a href="#">Сертифікат</a></li>
 			</ul>
 		</li>
-		<li><a href="#">Послуги</a></li>
-		<li><a href="#">Записатись</a></li>
+		<li><a href="#">Записатися</a></li>
+		<li><a href="view:${baseUrl}/price" class="navigate">Ціна</a></li>
 		<li><a href="#">Блог</a></li>
 		<li><a href="view:${baseUrl}/contacts" class="navigate">Контакти</a></li>
 	</ul>
@@ -39,11 +39,12 @@
 		<!-- menu left sub bar -->
 		<ul id="main-menu-social" class="cfx ul-vlist menu-drop-down" --spacing="2px" --text-color="white" --color="#9c9c9c" --fill="#333">
 			<li><a class="navigate link-bg icon-round icon-facebook" href="away:https://www.facebook.com/tsukOrochka/?fref=pb&hc_location=profile_browser"></a></li>
+			<li><a class="navigate link-bg icon-round icon-instagram" href="away:https://www.instagram.com/zmeeva.alex/"></a></li>
 			<li><a class="link-bg icon-round icon-google" href=""></a></li>
 			<li><a class="link-bg icon-round icon-twitter" href=""></a></li>
 			<li><a class="link-bg icon-round icon-pinterest" href=""></a></li>
 			<li><a class="link-bg icon-round icon-linkedin" href=""></a></li>
-			<li><a class="link-bg icon-round icon-instagram" href=""></a></li>
+			
 		</ul>
 
 	</div>

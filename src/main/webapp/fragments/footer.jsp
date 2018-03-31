@@ -41,12 +41,12 @@
        					ЦукОрочка (c) 2018. Designed by: Antypina Oleksandra
        				</div>
        				<ul class="cfx ul-hlist to-right width-1-3" --color="white">
-                		<li><a class="link-inv icon-facebook"  href=""></a></li>
+                		<li><a class="navigate link-inv icon-facebook" href="away:https://www.facebook.com/tsukOrochka/?fref=pb&hc_location=profile_browser"></a></li>
+						<li><a class="navigate link-inv icon-instagram" href="away:https://www.instagram.com/zmeeva.alex/"></a></li>
                 		<li><a class="link-inv icon-google"    href=""></a></li>
                 		<li><a class="link-inv icon-twitter"   href=""></a></li>
                 		<li><a class="link-inv icon-pinterest" href=""></a></li>
                 		<li><a class="link-inv icon-linkedin"  href=""></a></li>
-                		<li><a class="link-inv icon-instagram" href=""></a></li>
                 	</ul>
                 	<cfx-v-spacer-middle></cfx-v-spacer-middle>
                 	<cfx-v-spacer-middle></cfx-v-spacer-middle>
