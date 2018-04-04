@@ -24,6 +24,7 @@ import com.alex.spring.service.UserService;
 @Controller
 @RequestMapping("/user")
 public class UserController {
+	
 
 	@Autowired
 	private UserService userService;
@@ -126,6 +127,15 @@ public class UserController {
 		userService.uploadAvatar(principal.getName(), file);
 		
 		return "redirect:/user/profile";
+	}
+	
+	@GetMapping("/booking")
+	public String showBooking(Principal principal,Model model){
+		if(principal != null){
+			User entity = userRepository.findByLogin(principal.getName());
+			model.addAttribute("user", entity);
+		}
+		return "user/booking";
 	}
 	
 	
