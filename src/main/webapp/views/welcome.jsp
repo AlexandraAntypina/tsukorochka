@@ -61,37 +61,31 @@
 					<cfx-section class="text-center h-center alt-color">
 
 						<img src="media/title-icon-base.png" alt="">
-						<div class="text-700">Why Our Professional Wellness Spa it’s Your Best Choice?</div>
+						<div class="text-700">Як проходить процес шугарингу?</div>
 
 						<cfx-flex type="flex-row" @padding-left="15px" @padding-right="15px">
 							<cfx-flex-item>
 								<img src="media/briliant.png" alt="">
-								<div class="text-400">Brilliant Package</div>
+								<div class="text-400">ПІДГОТОВКА</div>
 								<div>
-									Includes your choice of one hour massage or facial as well as a basic manicure, basic pedicure, shampoo & blow dry and make-up application!
+									Шкіра депільованої зони обробляється професійним очищуючим засобом, який також обезжирює та дезинфікує шкіру.
 								</div>
 							</cfx-flex-item>
 							<cfx-flex-item>
 								<img src="media/leaf.png" alt="">
-								<div class="text-400">Brilliant Package</div>
+								<div class="text-400">ДЕПІЛЯЦІЯ</div>
 								<div>
-									Includes your choice of one hour massage or facial as well as a basic manicure, basic pedicure, shampoo & blow dry and make-up application!
+								Оброблення шкіри тальком. Безпосереднє видалення небажаного волосся мануальною технікою.
 								</div>
 							</cfx-flex-item>
 							<cfx-flex-item>
 								<img src="media/sun.png" alt="">
-								<div class="text-400">Brilliant Package</div>
+								<div class="text-400">ЗВОЛОЖЕННЯ</div>
 								<div>
-									Includes your choice of one hour massage or facial as well as a basic manicure, basic pedicure, shampoo & blow dry and make-up application!
+								Зняття залишків пасти, обробка шкіри засобом після депіляції, який зволожує, заспокоює та знімає подразнення шкіри.
 								</div>
 							</cfx-flex-item>
-							<cfx-flex-item>
-								<img src="media/package.png" alt="">
-								<div class="text-400">Brilliant Package</div>
-								<div>
-									Includes your choice of one hour massage or facial as well as a basic manicure, basic pedicure, shampoo & blow dry and make-up application!
-								</div>
-							</cfx-flex-item>
+							
 						</cfx-flex>
 					</cfx-section>
 			   </cfx-paralax-bgnd>
@@ -101,7 +95,8 @@
 				<div class="text-center">
 					<img src="media/title-icon-alt.png" alt="">
 					<cfx-v-spacer-small></cfx-v-spacer-small>
-					<div class="text-700 h-center">Top Types of Massage Therapy Services</div>
+					
+					<div class="text-700 h-center">аіваіві</div>
 					<cfx-v-spacer-small></cfx-v-spacer-small>
 			   </div>
 
@@ -254,7 +249,7 @@
 				<div class="text-center">
 					<img src="media/title-icon-alt.png" alt="">
 					<cfx-v-spacer-small></cfx-v-spacer-small>
-					<div class="text-700 font-curs h-center">Health Tips, Massage News & Personal Advice</div>
+					<div class="text-700 font-curs h-center">Техника шугаринга</div>
 					<cfx-v-spacer-small></cfx-v-spacer-small>
 				</div>
 				<cfx-v-spacer-extralarge></cfx-v-spacer-extralarge>
@@ -263,17 +258,36 @@
 					<cfx-flex-item>
 						<a href=""><img src="media/section/mt-1085-home-img4.jpg" alt=""></a>
 						<cfx-v-spacer-middle></cfx-v-spacer-middle>
-						<a href="" class="link text-300">Revealing The Benefits of Regular Massage Treatments</a>
+						<a class="font-base text-400 link" href="" >
+						Мануальна або класична техніка.
+						<div class="font-simple text-400 text-topic">
+							Видалення волосся проводиться мануально, тобто руками.
+						</div>
+						</a>
 					</cfx-flex-item>
 					<cfx-flex-item>
 						<a href=""><img src="media/section/mt-1085-home-img5.jpg" alt=""></a>
 						<cfx-v-spacer-middle></cfx-v-spacer-middle>
-						<a href="" class="link text-300">How Thai Massage Helps to Unlock the Body’s Flexibility</a>
+						<a href="" class="font-base text-400 link">
+						Бандажна техніка.
+							<div class="font-simple text-400 text-topic">
+								 Використовується, якщо необхідно видалити велику кількість довгого волосся.
+								 Ця техніка нагадує процес епіляції воском: паста наноситься шпателем, 
+								 а потім поверх накладаються спеціальні смужки (бандаж), які знімають різким рухом
+								 уздовж лінії росту волосся.
+							 </div>
+						</a>
 					</cfx-flex-item>
 					<cfx-flex-item>
 						<a href=""><img src="media/section/mt-1085-home-img6.jpg" alt=""></a>
 						<cfx-v-spacer-middle></cfx-v-spacer-middle>
-						<a href="" class="link text-300">How Can Sports Massage Motivate Your Employees?</a>
+						<a href="" class="font-base text-400 link">
+						Шпательна техніка.
+							<div class="font-simple text-400 text-topic"> 
+								У цій техніці цукрової депіляції використовується шпатель, яким накладається і
+								забирається паста. Дану техніку епіляції можна проводити на будь-якій зоні тіла.
+							 </div>
+						</a>
 					</cfx-flex-item>
 
 				</cfx-flex>
