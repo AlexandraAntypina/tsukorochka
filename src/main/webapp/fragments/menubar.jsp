@@ -24,7 +24,7 @@
 				<li><a href="#">Сертифікат</a></li>
 			</ul>
 		</li>
-		<li><a href="#">Записатися</a></li>
+		<li><a href="view:${baseUrl}/user/booking" class="navigate"">Записатися</a></li>
 		<li><a href="view:${baseUrl}/price" class="navigate">Ціна</a></li>
 		<li><a href="#">Блог</a></li>
 		<li><a href="view:${baseUrl}/contacts" class="navigate">Контакти</a></li>
