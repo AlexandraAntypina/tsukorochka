@@ -9,8 +9,8 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "calendar")
-public class Calendar extends BaseEntity{
+@Table(name = "anonymous_calendar")
+public class AnonymousCalendar extends BaseEntity{
 
 	@Column(name="date")
 	private String date;
@@ -25,11 +25,13 @@ public class Calendar extends BaseEntity{
 	@Column(name="title")
 	private String title;
 	
-	@OneToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "user_id", nullable = false)
-	private User user;
+	@Column(name="name")
+	private String name;
 	
-	public Calendar(){
+	@Column(name="phone_number")
+	private String phoneNumber;
+	
+	public AnonymousCalendar(){
 		
 	}
 
@@ -49,6 +51,22 @@ public class Calendar extends BaseEntity{
 		this.time = time;
 	}
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
 	public OrderDetails getOrder() {
 		return order;
 	}
@@ -65,13 +83,4 @@ public class Calendar extends BaseEntity{
 		this.title = title;
 	}
 
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
-	
-	
 }
