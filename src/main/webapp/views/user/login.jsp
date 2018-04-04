@@ -81,6 +81,7 @@
 </cfx-page-section>
 
 <script type="text/javascript">
+$(function() {
 	$('#toggle-registration').on('click', function() {
 		if ($('.login-panel').hasClass('active')) {
 			return false;
@@ -101,4 +102,6 @@
 		});
 	});
 
+	$("form input").triggerNotEmpty();
+});
 </script>
