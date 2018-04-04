@@ -69,11 +69,12 @@
     <link rel="stylesheet" href="${baseUrl}/style/cfx-icons.css">
     <link rel="stylesheet" href="${baseUrl}/style/cfx-form.css">
     <link rel="stylesheet" href="${baseUrl}/style/cfx-loading.css">
+    <link rel="stylesheet" href="${baseUrl}/style/chosen.css">
 
     <!-- general scripts -->
     <script src="${baseUrl}/js/jquery-3.2.1.min.js"></script>
     <script src="${baseUrl}/js/jquery-integration.js"></script>
-
+	<script src="${baseUrl}/js/chosen.jquery.js"></script>
 </head>
 
 <body class="background">

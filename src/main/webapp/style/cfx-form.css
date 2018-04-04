@@ -302,6 +302,11 @@ input.not-empty::-webkit-datetime-edit{ color: #000; }
 	font-weight: 400;
 }
 
+.card .input-container .chosen-container,
+.input-panel .input-container .chosen-container {
+	margin-top: 30px;
+}
+
 .card .input-container.mini input,
 .card .input-container.mini select {
 	outline: none;
@@ -643,3 +648,21 @@ table.price tr:nth-child(odd){
 table.price td:FIRST-CHILD {
 	padding-left: 10px;
 }
+
+.flex-half-panel {
+	max-width: 50%;
+}
+
+@media screen and (max-width: 990px) {
+	.flex-half-panel {
+		max-width: 100%;
+	}
+}
+
+.input-container textarea{
+	width: 100%;
+	height: 80px;
+	
+}
+
+
