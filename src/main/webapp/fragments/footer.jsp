@@ -1,17 +1,22 @@
 ﻿<cfx-v-spacer-extralarge></cfx-v-spacer-extralarge>
        		<cfx-flex type="flex-row" item-spacing="small" class="cfx h-center text-left alt-color" @max-width="80vw">
         			<cfx-flex-item>
-        				<div class="text-300">About Espero</div>
+        				<div class="text-300">Про нас</div>
         				<cfx-v-spacer-small></cfx-v-spacer-small>
         				<div>
-        					Our mission at Espero is to provide you with the ultimate salon/spa experience in a nurturing and peaceful environment. Apollo’s staff is a warm and committed team who will work together to provide excellence. We take great pride in our craft and will always do our best to create a superb spa experience for you.
+        				Процедуру видалення волосся проводить сертифікований майстер Олександра Антипіна.
+        				
         				</div>
         			</cfx-flex-item>
         			<cfx-flex-item>
-        				<div class="text-300">Our Services</div>
+        				<div class="text-300">Наш сервіс</div>
         				<cfx-v-spacer-small></cfx-v-spacer-small>
         				<div>
-        					Our mission at Espero is to provide you with the ultimate salon/spa experience in a nurturing and peaceful environment. Apollo’s staff is a warm and committed team who will work together to provide excellence. We take great pride in our craft and will always do our best to create a superb spa experience for you.
+        				Найвищі вимоги у питаннях безпечності для здоров'я — один з ключових пріоритетів в нашій роботі.
+        				 Щоб гарантувати нашим відвідувачам найвищий рівень чистоти і стерильності, всі процедури з 
+        				 видалення волосся проходять з використанням професійної косметики, гіпоалергічних засобів та 
+        				 одноразових матеріалів.
+        				 Всі поверхні після кожної індивідуальної процедури обробляються дезинфікуючими препаратами.
         				</div>
         			</cfx-flex-item>
         			<cfx-flex-item>
