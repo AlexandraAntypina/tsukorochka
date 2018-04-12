@@ -64,11 +64,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			.and()
 			
 			.authorizeRequests()
-				.antMatchers("/admin/**").hasRole(UserRole.SUPER.toString())
+				.antMatchers("/admin/**").hasAuthority(UserRole.SUPER.toString())
 //				.antMatchers("/user/**").hasAnyRole(UserRole.SUPER.toString(),UserRole.USER.toString())
 				.antMatchers("/user/login").permitAll()
 				.anyRequest().permitAll()
 			.and()
+			
 			
 			.exceptionHandling()
 				.accessDeniedPage("/access-denied")
