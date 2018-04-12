@@ -1,7 +1,6 @@
 package com.alex.spring.controller;
 
 import java.security.Principal;
-import java.util.Date;
 
 import javax.servlet.http.HttpServletRequest;
 

@@ -1,7 +1,5 @@
 package com.alex.spring.service;
 
-import java.util.Date;
-
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -117,6 +115,24 @@ public class UserService {
 			user.setAvatarUrl(url);
 			userRepository.save(user);
 		}
+	}
+
+	public boolean addAdmin(String login, String email, String password) {
+		
+		if(userRepository.findByLogin(login) != null){
+			return false;
+		}
+		
+		User user = new User();
+		user.setLogin(login);
+		user.setEmail(email);
+		user.setEncryptedPWD(passwordEncoder.encode(password));
+		user.setRole(UserRole.SUPER);
+		user.setStatus(UserStatus.ACTIVE);
+		
+		userRepository.save(user);
+		
+		return true;
 	}
 	
 }

@@ -6,7 +6,9 @@
 
 	<cfx-paralax-bgnd --image="url('../media/main-logo-bgnd.png')">
 		<cfx-section class="text-center h-center">
-			
+		<h1>
+		 Ви не маєте прав адміністратора!
+		</h1>			
 
 		</cfx-section>
 	</cfx-paralax-bgnd>

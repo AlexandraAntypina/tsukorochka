@@ -624,28 +624,33 @@ input.not-empty::-webkit-datetime-edit{ color: #000; }
 	height: auto;
 }
 
-table.price{
+table.price,
+table.result-set{
     width: 50%;
     text-align: left;
     border-collapse: collapse;
 }
 
-table.price tr{
+table.price tr,
+table.result-set tr{
     height: 48px;
     
 }
 
-table.price tr:nth-child(even){
+table.price tr:nth-child(even),
+table.result-set tr:nth-child(even){
    border-bottom: 2px solid #DDD;
     background-color: #F9F9F9;
 }
 
-table.price tr:nth-child(odd){
+table.price tr:nth-child(odd),
+table.result-set tr:nth-child(odd){
    border-bottom: 2px solid #DDD;
     background-color: white;
 }
 
-table.price td:FIRST-CHILD {
+table.price td:FIRST-CHILD,
+table.result-set td:FIRST-CHILD {
 	padding-left: 10px;
 }
 
@@ -665,4 +670,17 @@ table.price td:FIRST-CHILD {
 	
 }
 
+.search {
+	text-align: center;
+}
 
+.search button,
+.search input,
+.search select {
+	line-height: 1em;
+}
+
+.search button,
+.search select {
+	height: 22px;
+}

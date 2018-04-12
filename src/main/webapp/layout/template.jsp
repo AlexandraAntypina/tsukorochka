@@ -70,6 +70,7 @@
     <link rel="stylesheet" href="${baseUrl}/style/cfx-form.css">
     <link rel="stylesheet" href="${baseUrl}/style/cfx-loading.css">
     <link rel="stylesheet" href="${baseUrl}/style/chosen.css">
+    <link rel="stylesheet" href="${baseUrl}/style/pagination.css">
 
     <!-- general scripts -->
     <script src="${baseUrl}/js/jquery-3.2.1.min.js"></script>

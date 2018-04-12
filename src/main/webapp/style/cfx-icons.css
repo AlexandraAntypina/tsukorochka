@@ -59,3 +59,15 @@
 .icon-clock:before{
 	content: "\f017";
 }
+
+.icon-search:before {
+	content: "\f002";
+}
+
+.icon-add:before {
+	content: "\f067";
+}
+
+.icon-add-photo:before {
+	content: "\f03e";
+}

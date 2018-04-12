@@ -169,6 +169,13 @@ cfx-v-spacer-extralarge {
 	padding-bottom: var(--lt-spacing-v-small);
 }
 
+.padding-middle {
+	padding-left: var(--lt-spacing-middle);
+	padding-right: var(--lt-spacing-middle);
+	padding-top: var(--lt-spacing-v-middle);
+	padding-bottom: var(--lt-spacing-v-middle);
+}
+
 .space-l-small {
 	margin-left: var(--lt-spacing-small);
 }

@@ -19,8 +19,8 @@
 		<li>
 			<a href="#">Про нас<tuggle /></a>
 			<ul>
+				<li><a href="view:${baseUrl}/about-us" class="navigate">Про нас</a></li>
 				<li><a href="#">Відгуки</a></li>
-				<li><a href="#">Ми на мапі</a></li>
 				<li><a href="#">Сертифікат</a></li>
 			</ul>
 		</li>

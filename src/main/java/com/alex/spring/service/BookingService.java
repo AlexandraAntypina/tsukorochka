@@ -10,6 +10,7 @@ import com.alex.spring.entity.Calendar;
 import com.alex.spring.entity.OrderDetails;
 import com.alex.spring.entity.OrderStatus;
 import com.alex.spring.entity.User;
+import com.alex.spring.entity.UserDetails;
 import com.alex.spring.repository.AnonymousCalendarRepository;
 import com.alex.spring.repository.CalendarRepository;
 import com.alex.spring.repository.OrderDetailsRepository;
@@ -60,7 +61,12 @@ public class BookingService {
 		calendar.setUser(user);
 		calendar.setDate(date);
 		calendar.setTime(time);
-		calendar.setTitle(user.getDetails().getName() + " " + user.getDetails().getPhoneNumber());
+		UserDetails details = user.getDetails();
+		if(details != null) {
+			calendar.setTitle(user.getDetails().getName() + " " + phoneNumber);
+		} else {
+			calendar.setTitle(login + " " + phoneNumber);
+		}
 		
 		OrderDetails orderDetails = new OrderDetails();
 		orderDetails.setServiceType(services);
